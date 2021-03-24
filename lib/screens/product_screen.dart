@@ -10,13 +10,9 @@ class ProductScreen extends StatelessWidget {
     final productId = routeArfs['id'];
     final productTitle = routeArfs['title'];
     return Scaffold(
-      appBar: AppBar(
-        iconTheme: IconThemeData(color: Colors.black),
-        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
-        title: Text(
-          productTitle,
-          style: TextStyle(color: Colors.black),
-        ),
+      body: Text(
+        productTitle,
+        style: TextStyle(color: Colors.black),
       ),
       //body: Text("Product Screen"),
     );

@@ -52,13 +52,16 @@ class CategoryProduct extends StatelessWidget {
             //     colorBlendMode: BlendMode.softLight,
             //   ),
             // ),
-            ClipRRect(
-              borderRadius: BorderRadius.circular(20),
-              child: Image(
-                height: 130,
-                width: 150,
-                image: AssetImage(imageUrl),
-                fit: BoxFit.cover,
+            Hero(
+              tag: imageUrl,
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(20),
+                child: Image(
+                  height: 130,
+                  width: 150,
+                  image: AssetImage(imageUrl),
+                  fit: BoxFit.cover,
+                ),
               ),
             ),
             SizedBox(

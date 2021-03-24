@@ -29,7 +29,7 @@ class _TabBarsState extends State<TabBars> {
         backgroundColor: Theme.of(context).scaffoldBackgroundColor,
         selectedItemColor: Theme.of(context).primaryColor,
         currentIndex: _selectedPageIndex,
-        items: [
+        items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             //backgroundColor: Theme.of(context).primaryColor,
             icon: Icon(Icons.home),
