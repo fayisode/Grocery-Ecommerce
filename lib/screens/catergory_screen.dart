@@ -36,7 +36,13 @@ class CategoryScreen extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
-            buildPadding(context),
+            Padding(
+              padding: const EdgeInsets.only(left: 20, right: 120, top: 20),
+              child: Text(
+                "What would you like to buy?",
+                style: TextStyle(fontSize: 27, fontWeight: FontWeight.bold),
+              ),
+            ),
             Expanded(
               child: new GridView.builder(
                 padding: const EdgeInsets.all(10),
@@ -52,66 +58,6 @@ class CategoryScreen extends StatelessWidget {
             )
           ],
         ),
-      ),
-    );
-  }
-
-  Padding buildPadding(BuildContext context) {
-    return new Padding(
-      padding: const EdgeInsets.all(12.0),
-      child: new Column(
-        children: <Widget>[
-          new Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: <Widget>[
-              new Text(
-                "Grocery Plus",
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
-              ),
-              new Icon(Icons.notifications_none)
-            ],
-          ),
-          new ListTile(
-              contentPadding: EdgeInsets.all(0),
-              leading: CircleAvatar(
-                backgroundColor: Theme.of(context).primaryColor,
-                child: Icon(
-                  Icons.location_on,
-                  color: Colors.white,
-                ),
-              ),
-              title: new Text(
-                "Your Location",
-                style: TextStyle(fontSize: 11, fontWeight: FontWeight.normal),
-              ),
-              subtitle: new Text(
-                "32 Llanberis Close, Tonteg, CF35 IHR",
-                style: TextStyle(fontWeight: FontWeight.bold),
-              ),
-              trailing: new IconButton(
-                icon: new Icon(Icons.keyboard_arrow_right),
-                onPressed: () => print("Icon is working"),
-              ),
-              onTap: () {/* react to the tile being tapped */}),
-          new Container(
-            height: 50,
-            padding: EdgeInsets.all(10),
-            child: Row(children: <Widget>[
-              Icon(
-                Icons.search,
-                //color: Colors.black,
-              ),
-              Expanded(
-                child: TextFormField(
-                  decoration: InputDecoration(
-                      labelText: '  Search Anything', border: InputBorder.none),
-                ),
-              )
-            ]),
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10), color: Colors.white),
-          ),
-        ],
       ),
     );
   }

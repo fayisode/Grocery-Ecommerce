@@ -78,9 +78,15 @@ class _TodaysOfferState extends State<TodaysOffer> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
-                            Text(offerproducts[index].title,
-                                style: TextStyle(
-                                    fontSize: 18, fontWeight: FontWeight.w600)),
+                            Container(
+                              width: 120,
+                              child: Text(offerproducts[index].title,
+                                  maxLines: 2,
+                                  overflow: TextOverflow.ellipsis,
+                                  style: TextStyle(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.w600)),
+                            ),
                             Column(
                               children: <Widget>[
                                 Text('\$${offerproducts[index].price}',
@@ -93,9 +99,14 @@ class _TodaysOfferState extends State<TodaysOffer> {
                             )
                           ],
                         ),
-                        Text(
-                          offerproducts[index].description,
-                          style: TextStyle(color: Colors.grey),
+                        Container(
+                          width: 160,
+                          child: Text(
+                            offerproducts[index].description,
+                            maxLines: 2,
+                            overflow: TextOverflow.ellipsis,
+                            style: TextStyle(color: Colors.grey),
+                          ),
                         ),
                         SizedBox(
                           height: 5,
@@ -112,7 +123,7 @@ class _TodaysOfferState extends State<TodaysOffer> {
                               height: 35,
                               decoration: BoxDecoration(
                                   color: Colors.blue,
-                                  borderRadius: BorderRadius.circular(20)),
+                                  borderRadius: BorderRadius.circular(10)),
                               child: Padding(
                                 padding: const EdgeInsets.all(8.0),
                                 child: Row(
@@ -139,6 +150,19 @@ class _TodaysOfferState extends State<TodaysOffer> {
                           ],
                         )
                       ],
+                    ),
+                  ),
+                ),
+                Positioned(
+                  left: 20.0,
+                  top: 20.0,
+                  bottom: 20.0,
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(20),
+                    child: Image(
+                      width: 110,
+                      image: AssetImage(offerproducts[index].imageUrl),
+                      fit: BoxFit.cover,
                     ),
                   ),
                 )

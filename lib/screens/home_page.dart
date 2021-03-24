@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grocery_plus/widgets/favourites.dart';
 import 'package:grocery_plus/widgets/todays_offer.dart';
 
 class HomePage extends StatefulWidget {
@@ -8,7 +9,7 @@ class HomePage extends StatefulWidget {
 
 //
 class _HomePageState extends State<HomePage> {
-  List<Widget> _pages = [TodaysOffer(), TodaysOffer()];
+  List<Widget> _pages = [TodaysOffer(), Favourites()];
   int _selectedPageIndex = 0;
 
   void _selectPage(int index) {
@@ -24,15 +25,9 @@ class _HomePageState extends State<HomePage> {
             child: Column(
       //padding: EdgeInsets.symmetric(vertical: 30),
       children: <Widget>[
-        Padding(
-          padding: const EdgeInsets.only(left: 20, right: 120, top: 30),
-          child: Text(
-            "What would your like to buy?",
-            style: TextStyle(fontSize: 27, fontWeight: FontWeight.bold),
-          ),
-        ),
+        buildPadding(context),
         SizedBox(
-          height: 20,
+          height: 5,
         ),
         Container(
           height: 40,
@@ -70,11 +65,71 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
         SizedBox(
-          height: 12,
+          height: 5,
         ),
-        Expanded(child: Container(child: _pages.first))
+        Expanded(child: Container(child: _pages[_selectedPageIndex]))
       ],
     )));
+  }
+
+  Padding buildPadding(BuildContext context) {
+    return new Padding(
+      padding: const EdgeInsets.all(12.0),
+      child: new Column(
+        children: <Widget>[
+          new Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              new Text(
+                "Grocery Plus",
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+              ),
+              new Icon(Icons.notifications_none)
+            ],
+          ),
+          new ListTile(
+              contentPadding: EdgeInsets.all(0),
+              leading: CircleAvatar(
+                backgroundColor: Theme.of(context).primaryColor,
+                child: Icon(
+                  Icons.location_on,
+                  color: Colors.white,
+                ),
+              ),
+              title: new Text(
+                "Your Location",
+                style: TextStyle(fontSize: 11, fontWeight: FontWeight.normal),
+              ),
+              subtitle: new Text(
+                "32 Llanberis Close, Tonteg, CF35 IHR",
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+              trailing: new IconButton(
+                icon: new Icon(Icons.keyboard_arrow_right),
+                onPressed: () => print("Icon is working"),
+              ),
+              onTap: () {/* react to the tile being tapped */}),
+          new Container(
+            height: 50,
+            padding: EdgeInsets.all(10),
+            child: Row(children: <Widget>[
+              Icon(
+                Icons.search,
+                //color: Colors.black,
+              ),
+              Expanded(
+                child: TextFormField(
+                  decoration: InputDecoration(
+                      labelText: '  Search Anything', border: InputBorder.none),
+                ),
+              )
+            ]),
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10), color: Colors.white),
+          ),
+        ],
+      ),
+    );
   }
 }
 
