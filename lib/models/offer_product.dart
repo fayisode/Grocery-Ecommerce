@@ -7,6 +7,7 @@ class ProductOffer {
   double kg;
   String description;
   String imageUrl;
+  String category;
 
   ProductOffer(
       {@required this.id,
@@ -14,5 +15,6 @@ class ProductOffer {
       @required this.title,
       @required this.description,
       @required this.kg,
-      @required this.price});
+      @required this.price,
+      @required this.category});
 }

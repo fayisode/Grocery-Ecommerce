@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import './home_page.dart';
 import './catergory_screen.dart';
+import 'order.dart';
 
 class TabBars extends StatefulWidget {
   @override
@@ -8,7 +9,7 @@ class TabBars extends StatefulWidget {
 }
 
 class _TabBarsState extends State<TabBars> {
-  List<Widget> _pages = [HomePage(), CategoryScreen(), HomePage(), HomePage()];
+  List<Widget> _pages = [HomePage(), CategoryScreen(), OrderScreen()];
 
   int _selectedPageIndex = 0;
 
@@ -23,7 +24,8 @@ class _TabBarsState extends State<TabBars> {
     return Scaffold(
       body: _pages[_selectedPageIndex],
       bottomNavigationBar: BottomNavigationBar(
-        elevation: 5,
+        //elevation: 5,
+        showSelectedLabels: false,
         onTap: _selectPage,
         unselectedItemColor: Theme.of(context).buttonColor,
         backgroundColor: Theme.of(context).scaffoldBackgroundColor,
@@ -37,7 +39,7 @@ class _TabBarsState extends State<TabBars> {
           ),
           BottomNavigationBarItem(
             //backgroundColor: Theme.of(context).primaryColor,
-            icon: Icon(Icons.category),
+            icon: Icon(Icons.dashboard),
             title: SizedBox.shrink(),
           ),
           BottomNavigationBarItem(
@@ -45,14 +47,14 @@ class _TabBarsState extends State<TabBars> {
             icon: Icon(Icons.business_center),
             title: SizedBox.shrink(),
           ),
-          BottomNavigationBarItem(
-            //backgroundColor: Theme.of(context).primaryColor,
-            icon: CircleAvatar(
-              radius: 12,
-              backgroundImage: NetworkImage("https://i.imgur.com/zL4Krbz.jpg"),
-            ),
-            title: SizedBox.shrink(),
-          ),
+          // BottomNavigationBarItem(
+          //   //backgroundColor: Theme.of(context).primaryColor,
+          //   icon: CircleAvatar(
+          //     radius: 12,
+          //     backgroundImage: NetworkImage("https://i.imgur.com/zL4Krbz.jpg"),
+          //   ),
+          //   title: SizedBox.shrink(),
+          // ),
         ],
       ),
     );

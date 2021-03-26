@@ -24,6 +24,7 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.2
+  md2_tab_indicator: ^1.0.2
   provider: ^5.0.0
 
 dev_dependencies:
@@ -47,7 +48,6 @@ flutter:
     - assets/images/23829337548_77c73e43ce_o.jpg
     - assets/images/8043089660_ca4c7e2bf3_o.jpg
     - assets/images/12165979954_dfe0febd85_o.jpg
-
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
   # For details regarding adding assets from package dependencies, see
