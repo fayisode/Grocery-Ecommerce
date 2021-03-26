@@ -13,9 +13,7 @@ ListTile buildListTile(BuildContext context) {
       title: new Text(
         "Your Location",
         style: TextStyle(
-            color: Colors.lightGreen,
-            fontSize: 11,
-            fontWeight: FontWeight.normal),
+            color: Colors.black, fontSize: 11, fontWeight: FontWeight.normal),
       ),
       subtitle: new Text(
         "32 Llanberis Close, Tonteg, CF35 IHR",
@@ -24,7 +22,7 @@ ListTile buildListTile(BuildContext context) {
       trailing: new IconButton(
         icon: new Icon(
           Icons.keyboard_arrow_right,
-          color: Colors.lightGreen,
+          color: Colors.black,
         ),
         onPressed: () => print("Icon is working"),
       ),

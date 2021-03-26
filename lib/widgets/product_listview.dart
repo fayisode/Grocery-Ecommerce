@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:grocery_plus/models/offer_product.dart';
+import 'package:grocery_plus/screens/product_detail_screen.dart';
 
 class ProductList extends StatelessWidget {
   const ProductList({
@@ -8,6 +9,12 @@ class ProductList extends StatelessWidget {
   }) : super(key: key);
 
   final List<ProductOffer> offerproducts;
+  void selectCategory(BuildContext ctx, index_value) {
+    Navigator.of(ctx).pushNamed(ProductDetailScreen.routeNames, arguments: {
+      'id': offerproducts[index_value].id,
+      'title': offerproducts[index_value].title
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -67,7 +74,7 @@ class ProductList extends StatelessWidget {
                           maxLines: 2,
                           overflow: TextOverflow.ellipsis,
                           style: TextStyle(
-                            color: Colors.lightGreen,
+                            color: Colors.grey,
                             fontSize: 12,
                           ),
                         ),
@@ -121,14 +128,17 @@ class ProductList extends StatelessWidget {
                 left: 20.0,
                 top: 20.0,
                 bottom: 20.0,
-                child: Hero(
-                  tag: offerproducts[index].imageUrl,
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(20),
-                    child: Image(
-                      width: 110,
-                      image: AssetImage(offerproducts[index].imageUrl),
-                      fit: BoxFit.cover,
+                child: InkWell(
+                  onTap: () => selectCategory(context, index),
+                  child: Hero(
+                    tag: offerproducts[index].imageUrl,
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(20),
+                      child: Image(
+                        width: 110,
+                        image: AssetImage(offerproducts[index].imageUrl),
+                        fit: BoxFit.cover,
+                      ),
                     ),
                   ),
                 ),

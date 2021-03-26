@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:grocery_plus/providers/product.dart';
+import 'package:grocery_plus/screens/product_detail_screen.dart';
 import 'package:provider/provider.dart';
 import './screens/product_screen.dart';
 //import 'screens/home_page.dart';
@@ -26,6 +27,7 @@ class MyApp extends StatelessWidget {
         home: TabBars(),
         routes: {
           ProductScreen.routeName: (ctx) => ProductScreen(),
+          ProductDetailScreen.routeNames: (ctx) => ProductDetailScreen()
         },
       ),
     );

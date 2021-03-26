@@ -9,7 +9,13 @@ class TabBars extends StatefulWidget {
 }
 
 class _TabBarsState extends State<TabBars> {
-  List<Widget> _pages = [HomePage(), CategoryScreen(), OrderScreen()];
+  List<Widget> _pages = [
+    HomePage(),
+    CategoryScreen(),
+    OrderScreen(),
+    OrderScreen(),
+    OrderScreen()
+  ];
 
   int _selectedPageIndex = 0;
 
@@ -33,28 +39,34 @@ class _TabBarsState extends State<TabBars> {
         currentIndex: _selectedPageIndex,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            //backgroundColor: Theme.of(context).primaryColor,
-            icon: Icon(Icons.home),
-            title: SizedBox.shrink(),
-          ),
+              //backgroundColor: Theme.of(context).primaryColor,
+              icon: Icon(Icons.home),
+              //title: SizedBox.shrink()
+              label: "Home"),
           BottomNavigationBarItem(
-            //backgroundColor: Theme.of(context).primaryColor,
-            icon: Icon(Icons.dashboard),
-            title: SizedBox.shrink(),
-          ),
+              //backgroundColor: Theme.of(context).primaryColor,
+              icon: Icon(Icons.dashboard),
+              // title: SizedBox.shrink(),
+              label: "Home"),
           BottomNavigationBarItem(
-            //backgroundColor: Theme.of(context).primaryColor,
-            icon: Icon(Icons.business_center),
-            title: SizedBox.shrink(),
-          ),
-          // BottomNavigationBarItem(
-          //   //backgroundColor: Theme.of(context).primaryColor,
-          //   icon: CircleAvatar(
-          //     radius: 12,
-          //     backgroundImage: NetworkImage("https://i.imgur.com/zL4Krbz.jpg"),
-          //   ),
-          //   title: SizedBox.shrink(),
-          // ),
+              //backgroundColor: Theme.of(context).primaryColor,
+              icon: Icon(Icons.dashboard),
+              //title: SizedBox.shrink(),
+              label: "Home"),
+          BottomNavigationBarItem(
+              //backgroundColor: Theme.of(context).primaryColor,
+              icon: Icon(Icons.business_center),
+              //title: SizedBox.shrink(),
+              label: "Home"),
+          BottomNavigationBarItem(
+              //backgroundColor: Theme.of(context).primaryColor,
+              icon: CircleAvatar(
+                radius: 12,
+                backgroundImage:
+                    NetworkImage("https://i.imgur.com/zL4Krbz.jpg"),
+              ),
+              //title: SizedBox.shrink(),
+              label: "Home"),
         ],
       ),
     );
