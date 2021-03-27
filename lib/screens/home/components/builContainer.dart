@@ -8,6 +8,7 @@ Container buildContainer() {
     child: Row(children: <Widget>[
       Icon(
         Icons.search,
+        color: Colors.black38,
         //color: Colors.black,
       ),
       Expanded(

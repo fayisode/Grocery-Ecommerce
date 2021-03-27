@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_navigation_bar/responsive_navigation_bar.dart';
+import 'package:flutter_icons/flutter_icons.dart';
 
 //BottomNavigationBar
 NavigationBar buildBottomNavigationBar(
@@ -63,7 +64,7 @@ NavigationBar buildBottomNavigationBar(
       navigationBarButtons: const <NavigationBarButton>[
         NavigationBarButton(
           text: 'Home',
-          icon: Icons.home,
+          icon: FontAwesome.$500px,
           backgroundGradient: LinearGradient(
             colors: <Color>[Colors.cyan, Colors.blue],
           ),
@@ -77,21 +78,22 @@ NavigationBar buildBottomNavigationBar(
         ),
         NavigationBarButton(
           text: 'Cast',
-          icon: Icons.cast,
+          icon: MaterialIcons.cast,
           backgroundGradient: LinearGradient(
             colors: <Color>[Colors.blue, Colors.teal],
           ),
         ),
         NavigationBarButton(
           text: 'Order',
-          icon: Icons.business_center,
+          icon: FontAwesome.shopping_bag,
+          //business_center,
           backgroundGradient: LinearGradient(
             colors: <Color>[Colors.purple, Colors.cyan],
           ),
         ),
         NavigationBarButton(
           text: 'Profile',
-          icon: Icons.people,
+          icon: FontAwesome5.user,
           backgroundGradient: LinearGradient(
             colors: <Color>[Colors.cyan, Colors.indigo],
           ),

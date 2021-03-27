@@ -23,7 +23,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  auto_size_text: ^2.1.0
   cupertino_icons: ^1.0.2
+  flutter_icons: ^1.1.0
   google_fonts: ^2.0.0
   md2_tab_indicator: ^1.0.2
   provider: ^5.0.0
