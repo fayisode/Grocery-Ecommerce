@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../widgets/category_product.dart';
-import '../models/category.dart';
+import 'components/category_product.dart';
+import '../../models/category.dart';
 
 class CategoryScreen extends StatelessWidget {
   final List<Category> screenProduct = [

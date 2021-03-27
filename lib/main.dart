@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:grocery_plus/providers/product.dart';
-import 'package:grocery_plus/screens/product_detail_screen.dart';
+import 'package:grocery_plus/screens/product/product_detail_screen.dart';
 import 'package:provider/provider.dart';
-import './screens/product_screen.dart';
+import 'screens/product/product_screen.dart';
 //import 'screens/home_page.dart';
-import 'screens/tab_bar.dart';
+import 'screens/tab/tab_bar.dart';
 
 void main() {
   runApp(MyApp());

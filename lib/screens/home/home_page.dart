@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:grocery_plus/widgets/builContainer.dart';
-import 'package:grocery_plus/widgets/buildLastTile.dart';
-import 'package:grocery_plus/widgets/favourites.dart';
-import 'package:grocery_plus/screens/todays_offer.dart';
+import 'package:grocery_plus/screens/home/components/builContainer.dart';
+import 'package:grocery_plus/screens/home/components/buildLastTile.dart';
+import 'package:grocery_plus/screens/home/components/favourites.dart';
+import 'package:grocery_plus/screens/home/todays_offer.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -33,38 +33,7 @@ class _HomePageState extends State<HomePage> {
         ),
         Container(
           height: 40,
-          child: DefaultTabController(
-            length: 2,
-            child: TabBar(
-                indicatorSize: TabBarIndicatorSize.label,
-                onTap: _selectPage,
-                unselectedLabelColor: Colors.black54,
-                indicator: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: Colors.blue),
-                tabs: [
-                  Tab(
-                    child: Container(
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          border: Border.all(color: Colors.blue, width: 1)),
-                      child: Align(
-                          alignment: Alignment.center,
-                          child: Text("Today's Offer")),
-                    ),
-                  ),
-                  Tab(
-                    child: Container(
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          border: Border.all(color: Colors.blue, width: 1)),
-                      child: Align(
-                          alignment: Alignment.center,
-                          child: Text("Favourites")),
-                    ),
-                  ),
-                ]),
-          ),
+          child: buildDefaultTabController(),
         ),
         SizedBox(
           height: 5,
@@ -72,6 +41,38 @@ class _HomePageState extends State<HomePage> {
         Expanded(child: Container(child: _pages[_selectedPageIndex]))
       ],
     )));
+  }
+
+  DefaultTabController buildDefaultTabController() {
+    return DefaultTabController(
+      length: 2,
+      child: TabBar(
+          indicatorSize: TabBarIndicatorSize.label,
+          onTap: _selectPage,
+          unselectedLabelColor: Colors.black54,
+          indicator: BoxDecoration(
+              borderRadius: BorderRadius.circular(10), color: Colors.blue),
+          tabs: [
+            Tab(
+              child: Container(
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    border: Border.all(color: Colors.blue, width: 1)),
+                child: Align(
+                    alignment: Alignment.center, child: Text("Today's Offer")),
+              ),
+            ),
+            Tab(
+              child: Container(
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    border: Border.all(color: Colors.blue, width: 1)),
+                child: Align(
+                    alignment: Alignment.center, child: Text("Favourites")),
+              ),
+            ),
+          ]),
+    );
   }
 
   Padding buildPadding(BuildContext context) {

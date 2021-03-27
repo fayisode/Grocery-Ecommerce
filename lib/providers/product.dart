@@ -7,7 +7,8 @@ class Product with ChangeNotifier {
         id: "item1",
         imageUrl: "assets/images/38805974335_88cd7ef4db_o.jpg",
         title: "Soya Beans Chips",
-        description: "Blanditiis facere ex est odit sunt quam voluptas ipsam.",
+        description:
+            "Blanditiis facere ex est odit sunt quam voluptas ipsam.Inventore est distinctio vel facilis et omnis. Itaque vel totam voluptates earum illum sit et corporis. Illum nulla sequi perferendis minima animi eum quia saepe. Illum ipsa est incidunt blanditiis qui nemo excepturi a veniam. Repudiandae et laborum nihil sint omnis.",
         kg: 12,
         price: 23.5,
         category: "Fruit & Vegetables"),
@@ -15,7 +16,8 @@ class Product with ChangeNotifier {
         id: "item2",
         imageUrl: "assets/images/38805974335_88cd7ef4db_o.jpg",
         title: "Soya Beans Chips",
-        description: "Blanditiis facere ex est odit sunt quam voluptas ipsam.",
+        description:
+            "Blanditiis facere ex est odit sunt quam voluptas ipsam.Inventore est distinctio vel facilis et omnis. Itaque vel totam voluptates earum illum sit et corporis. Illum nulla sequi perferendis minima animi eum quia saepe. Illum ipsa est incidunt blanditiis qui nemo excepturi a veniam. Repudiandae et laborum nihil sint omnis.Blanditiis facere ex est odit sunt quam voluptas ipsam.",
         kg: 12,
         price: 23.5,
         category: "BreakFast"),
@@ -23,7 +25,8 @@ class Product with ChangeNotifier {
         id: "item3",
         imageUrl: "assets/images/38805974335_88cd7ef4db_o.jpg",
         title: "Soya Beans Chips",
-        description: "Blanditiis facere ex est odit sunt quam voluptas ipsam.",
+        description:
+            "Blanditiis facere ex est odit sunt quam voluptas ipsam.Inventore est distinctio vel facilis et omnis. Itaque vel totam voluptates earum illum sit et corporis. Illum nulla sequi perferendis minima animi eum quia saepe. Illum ipsa est incidunt blanditiis qui nemo excepturi a veniam. Repudiandae et laborum nihil sint omnis.Blanditiis facere ex est odit sunt quam voluptas ipsam.",
         kg: 12,
         price: 23.5,
         category: "Beverages"),
@@ -31,7 +34,8 @@ class Product with ChangeNotifier {
         id: "item4",
         imageUrl: "assets/images/38805974335_88cd7ef4db_o.jpg",
         title: "Soya Beans Chips",
-        description: "Blanditiis facere ex est odit sunt quam voluptas ipsam.",
+        description:
+            "Blanditiis facere ex est odit sunt quam voluptas ipsam.Inventore est distinctio vel facilis et omnis. Itaque vel totam voluptates earum illum sit et corporis. Illum nulla sequi perferendis minima animi eum quia saepe. Illum ipsa est incidunt blanditiis qui nemo excepturi a veniam. Repudiandae et laborum nihil sint omnis.",
         kg: 12,
         price: 23.5,
         category: "Meat & Fish"),
@@ -39,7 +43,8 @@ class Product with ChangeNotifier {
         id: "item5",
         imageUrl: "assets/images/38805974335_88cd7ef4db_o.jpg",
         title: "Soya Beans Chips",
-        description: "Blanditiis facere ex est odit sunt quam voluptas ipsam.",
+        description:
+            "Blanditiis facere ex est odit sunt quam voluptas ipsam.Inventore est distinctio vel facilis et omnis. Itaque vel totam voluptates earum illum sit et corporis. Illum nulla sequi perferendis minima animi eum quia saepe. Illum ipsa est incidunt blanditiis qui nemo excepturi a veniam. Repudiandae et laborum nihil sint omnis.",
         kg: 12,
         price: 23.5,
         category: "Snacks"),
@@ -47,7 +52,8 @@ class Product with ChangeNotifier {
         id: "item6",
         imageUrl: "assets/images/38805974335_88cd7ef4db_o.jpg",
         title: "Soya Beans Chips",
-        description: "Blanditiis facere ex est odit sunt quam voluptas ipsam.",
+        description:
+            "Blanditiis facere ex est odit sunt quam voluptas ipsam.Inventore est distinctio vel facilis et omnis. Itaque vel totam voluptates earum illum sit et corporis. Illum nulla sequi perferendis minima animi eum quia saepe. Illum ipsa est incidunt blanditiis qui nemo excepturi a veniam. Repudiandae et laborum nihil sint omnis.",
         kg: 12,
         price: 23.5,
         category: "Diary"),
