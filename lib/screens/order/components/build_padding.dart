@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 Padding buildPadding() {
   return Padding(
@@ -7,7 +8,8 @@ Padding buildPadding() {
       alignment: Alignment.topLeft,
       child: Text(
         "Orders",
-        style: TextStyle(fontSize: 25, fontWeight: FontWeight.w400),
+        style: GoogleFonts.lato(
+            textStyle: TextStyle(fontSize: 25, fontWeight: FontWeight.w400)),
       ),
     ),
   );

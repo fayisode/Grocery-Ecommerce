@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class CartCounter extends StatefulWidget {
   @override
@@ -27,7 +28,9 @@ class _CartCounterState extends State<CartCounter> {
           padding: const EdgeInsets.all(8.0),
           child: Text(
             numOfItems.toString().padLeft(2, "0"),
-            style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+            style: GoogleFonts.lato(
+                textStyle:
+                    TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
           ),
         ),
         buildOutlinedButton(

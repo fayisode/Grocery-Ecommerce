@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:grocery_plus/models/offer_product.dart';
 
 Padding buildPaddingProductTile(
@@ -16,14 +17,16 @@ Padding buildPaddingProductTile(
               children: <Widget>[
                 Text(
                   listproduct[0].category,
-                  style: TextStyle(color: Colors.white),
+                  style: GoogleFonts.lato(
+                      textStyle: TextStyle(color: Colors.white)),
                 ),
                 Text(
                   listproduct[0].title,
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 25,
-                      fontWeight: FontWeight.bold),
+                  style: GoogleFonts.lato(
+                      textStyle: TextStyle(
+                          color: Colors.white,
+                          fontSize: 25,
+                          fontWeight: FontWeight.bold)),
                 ),
               ],
             ),
@@ -40,13 +43,14 @@ Padding buildPaddingProductTile(
         Row(children: <Widget>[
           RichText(
               text: TextSpan(children: [
-            TextSpan(text: "Price\n"),
+            TextSpan(text: "Price\n", style: GoogleFonts.lato()),
             TextSpan(
                 text: '\$${listproduct[0].price}',
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 25,
-                    fontWeight: FontWeight.bold)),
+                style: GoogleFonts.lato(
+                    textStyle: TextStyle(
+                        color: Colors.white,
+                        fontSize: 25,
+                        fontWeight: FontWeight.bold))),
           ])),
           Container(
             margin: EdgeInsets.only(

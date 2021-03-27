@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:grocery_plus/screens/home/components/builContainer.dart';
 import 'package:grocery_plus/screens/home/components/buildLastTile.dart';
 import 'package:grocery_plus/screens/home/components/favourites.dart';
 import 'package:grocery_plus/screens/home/todays_offer.dart';
+// import 'package:sizer/sizer.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -59,7 +61,11 @@ class _HomePageState extends State<HomePage> {
                     borderRadius: BorderRadius.circular(10),
                     border: Border.all(color: Colors.blue, width: 1)),
                 child: Align(
-                    alignment: Alignment.center, child: Text("Today's Offer")),
+                    alignment: Alignment.center,
+                    child: Text(
+                      "Today's Offer",
+                      style: GoogleFonts.lato(),
+                    )),
               ),
             ),
             Tab(
@@ -68,7 +74,8 @@ class _HomePageState extends State<HomePage> {
                     borderRadius: BorderRadius.circular(10),
                     border: Border.all(color: Colors.blue, width: 1)),
                 child: Align(
-                    alignment: Alignment.center, child: Text("Favourites")),
+                    alignment: Alignment.center,
+                    child: Text("Favourites", style: GoogleFonts.lato())),
               ),
             ),
           ]),
@@ -82,7 +89,9 @@ class _HomePageState extends State<HomePage> {
         children: <Widget>[
           new Text(
             "Grocery Plus",
-            style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+            style: GoogleFonts.lato(
+                textStyle:
+                    TextStyle(fontSize: 25, fontWeight: FontWeight.w500)),
           ),
           new Icon(Icons.notifications_none)
         ],

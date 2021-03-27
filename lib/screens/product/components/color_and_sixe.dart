@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:grocery_plus/models/offer_product.dart';
 
 import 'color_dot.dart';
@@ -21,8 +22,11 @@ class ColorAndSize extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               Padding(
-                padding: const EdgeInsets.only(top: 10),
-                child: Text("Color"),
+                padding: const EdgeInsets.only(top: 10, bottom: 10),
+                child: Text(
+                  "Color",
+                  style: GoogleFonts.lato(),
+                ),
               ),
               Row(
                 children: <Widget>[
@@ -43,16 +47,18 @@ class ColorAndSize extends StatelessWidget {
               text: TextSpan(children: [
             TextSpan(
                 text: "Size\n",
-                style: TextStyle(
+                style: GoogleFonts.lato(
+                    textStyle: TextStyle(
                   color: Colors.black,
                   fontSize: 20,
-                )),
+                ))),
             TextSpan(
                 text: '${listproduct[0].kg} kg',
-                style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 20,
-                    fontWeight: FontWeight.w400)),
+                style: GoogleFonts.lato(
+                    textStyle: TextStyle(
+                        color: Colors.black,
+                        fontSize: 20,
+                        fontWeight: FontWeight.w400))),
           ])),
         ),
       ],

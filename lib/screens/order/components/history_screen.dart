@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:grocery_plus/models/offer_product.dart';
 import 'package:grocery_plus/providers/product.dart';
 import 'package:provider/provider.dart';
@@ -39,26 +40,27 @@ class _HistoryScreenState extends State<HistoryScreen> {
         ),
         title: new Text(
           'Orders #' + productslist[index].id,
-          style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+          style: GoogleFonts.lato(
+              textStyle: TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
         ),
         subtitle: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            new Text(
-              "Delivered",
-              style: TextStyle(color: Colors.lightGreen),
-            ),
-            new Text(
-              "October 28,2020",
-              style: TextStyle(fontWeight: FontWeight.w400, color: Colors.grey),
-            ),
+            new Text("Delivered",
+                style: GoogleFonts.lato(
+                    textStyle: TextStyle(color: Colors.lightGreen))),
+            new Text("October 28,2020",
+                style: GoogleFonts.lato(
+                    textStyle: TextStyle(
+                        fontWeight: FontWeight.w400, color: Colors.grey))),
           ],
         ),
         trailing: Text(productslist[index].price.toString(),
-            style: TextStyle(
-                color: Colors.orange,
-                fontSize: 20,
-                fontWeight: FontWeight.bold)),
+            style: GoogleFonts.lato(
+                textStyle: TextStyle(
+                    color: Colors.orange,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold))),
         onTap: () {/* react to the tile being tapped */});
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'favourite_container.dart';
 
@@ -18,7 +19,8 @@ Row buildRow2() {
             children: <Widget>[
               Text(
                 " Add to Bag",
-                style: TextStyle(color: Colors.white),
+                style:
+                    GoogleFonts.lato(textStyle: TextStyle(color: Colors.white)),
               ),
               Icon(
                 Icons.add,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class AddToCart extends StatelessWidget {
   const AddToCart({
@@ -34,13 +35,13 @@ class AddToCart extends StatelessWidget {
                         borderRadius: BorderRadius.circular(18)),
                     backgroundColor: Colors.blue),
                 onPressed: () {},
-                child: Text(
-                  "Buy Now".toUpperCase(),
-                  style: TextStyle(
-                      fontSize: 17,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white),
-                ),
+                child: Text("Buy Now".toUpperCase(),
+                    style: GoogleFonts.lato(
+                      textStyle: TextStyle(
+                          fontSize: 17,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white),
+                    )),
               ),
             ),
           )

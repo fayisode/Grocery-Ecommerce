@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class OngoingScreen extends StatefulWidget {
   @override
@@ -10,7 +11,10 @@ class _OngoingScreenState extends State<OngoingScreen> {
   Widget build(BuildContext context) {
     if (true) {
       return Center(
-        child: Text('You have no favourites yet-start adding some'),
+        child: Text(
+          'You have no favourites yet-start adding some',
+          style: GoogleFonts.lato(),
+        ),
       );
     }
   }

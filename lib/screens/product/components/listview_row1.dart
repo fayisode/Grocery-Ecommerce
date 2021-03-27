@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 Row buildRow(int index, offerproducts) {
   return Row(
@@ -10,16 +11,21 @@ Row buildRow(int index, offerproducts) {
         child: Text(offerproducts[index].title,
             maxLines: 2,
             overflow: TextOverflow.ellipsis,
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600)),
+            style: GoogleFonts.lato(
+                textStyle:
+                    TextStyle(fontSize: 18, fontWeight: FontWeight.w600))),
       ),
       Column(
         children: <Widget>[
           Text('\$${offerproducts[index].price}',
-              style: TextStyle(
-                  color: Colors.orange,
-                  fontSize: 22,
-                  fontWeight: FontWeight.w600)),
-          Text('per pax', style: TextStyle(color: Colors.grey)),
+              style: GoogleFonts.lato(
+                  textStyle: TextStyle(
+                      color: Colors.orange,
+                      fontSize: 22,
+                      fontWeight: FontWeight.w600))),
+          Text('per pax',
+              style:
+                  GoogleFonts.lato(textStyle: TextStyle(color: Colors.grey))),
         ],
       )
     ],

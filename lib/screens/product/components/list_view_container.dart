@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'listview_row1.dart';
 import 'listview_row2.dart';
@@ -22,22 +23,23 @@ Container buildMainContainer(int index, offerproducts) {
           ),
           Container(
             width: 160,
-            child: Text(
-              offerproducts[index].description,
-              maxLines: 2,
-              overflow: TextOverflow.ellipsis,
-              style: TextStyle(
-                color: Colors.grey,
-                fontSize: 12,
-              ),
-            ),
+            child: Text(offerproducts[index].description,
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
+                style: GoogleFonts.lato(
+                  textStyle: TextStyle(
+                    color: Colors.grey,
+                    fontSize: 12,
+                  ),
+                )),
           ),
           SizedBox(
             height: 5,
           ),
-          Text(offerproducts[index].kg.toString() + " kg"),
+          Text(offerproducts[index].kg.toString() + " kg",
+              style: GoogleFonts.lato()),
           SizedBox(
-            height: 9,
+            height: 5,
           ),
           buildRow2()
         ],

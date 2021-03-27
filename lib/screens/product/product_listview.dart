@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:grocery_plus/models/offer_product.dart';
 import 'package:grocery_plus/screens/product/product_detail_screen.dart';
 import 'components/list_view_container.dart';
+import 'package:sizer/sizer.dart';
 
 class ProductList extends StatelessWidget {
   const ProductList({
@@ -44,9 +45,9 @@ class ProductList extends StatelessWidget {
         child: Hero(
           tag: offerproducts[index].imageUrl + offerproducts[index].id,
           child: ClipRRect(
-            borderRadius: BorderRadius.circular(20),
+            borderRadius: BorderRadius.circular(20.0),
             child: Image(
-              width: 110,
+              width: 110.0,
               image: AssetImage(offerproducts[index].imageUrl),
               fit: BoxFit.cover,
             ),

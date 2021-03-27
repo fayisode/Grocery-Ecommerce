@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:md2_tab_indicator/md2_tab_indicator.dart';
 
 Container buildContainer(_selectPages) {
@@ -21,14 +22,19 @@ Container buildContainer(_selectPages) {
           tabs: [
             Tab(
               child: Container(
-                child:
-                    Align(alignment: Alignment.center, child: Text("Ongoing")),
+                child: Align(
+                    alignment: Alignment.center,
+                    child: Text(
+                      "Ongoing",
+                      style: GoogleFonts.lato(),
+                    )),
               ),
             ),
             Tab(
               child: Container(
-                child:
-                    Align(alignment: Alignment.center, child: Text("History")),
+                child: Align(
+                    alignment: Alignment.center,
+                    child: Text("History", style: GoogleFonts.lato())),
               ),
             ),
           ]),

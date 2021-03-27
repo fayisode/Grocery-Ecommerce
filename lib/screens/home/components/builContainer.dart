@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 Container buildContainer() {
   return new Container(
@@ -12,7 +13,9 @@ Container buildContainer() {
       Expanded(
         child: TextFormField(
           decoration: InputDecoration(
-              labelText: '  Search Anything', border: InputBorder.none),
+              labelStyle: GoogleFonts.lato(),
+              labelText: '  Search Anything',
+              border: InputBorder.none),
         ),
       )
     ]),

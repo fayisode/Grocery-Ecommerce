@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'components/category_product.dart';
 import '../../models/category.dart';
 
@@ -38,10 +39,10 @@ class CategoryScreen extends StatelessWidget {
           children: [
             Padding(
               padding: const EdgeInsets.only(left: 20, right: 120, top: 20),
-              child: Text(
-                "What would you like to buy?",
-                style: TextStyle(fontSize: 27, fontWeight: FontWeight.bold),
-              ),
+              child: Text("What would you like to buy?",
+                  style: GoogleFonts.lato(
+                      textStyle: TextStyle(
+                          fontSize: 27, fontWeight: FontWeight.bold))),
             ),
             Expanded(
               child: new GridView.builder(
