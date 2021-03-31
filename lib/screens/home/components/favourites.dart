@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:sizer/sizer.dart';
 
 class Favourites extends StatelessWidget {
   @override
@@ -8,7 +9,9 @@ class Favourites extends StatelessWidget {
       return Center(
         child: Text(
           'You have no favourites yet-start adding some',
-          style: GoogleFonts.lato(),
+          style: GoogleFonts.lato(
+              textStyle:
+                  TextStyle(fontSize: 11.0.sp, fontStyle: FontStyle.normal)),
         ),
       );
     }

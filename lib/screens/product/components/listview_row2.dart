@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:sizer/sizer.dart';
 
 import 'favourite_container.dart';
 
@@ -8,12 +9,12 @@ Row buildRow2() {
     mainAxisAlignment: MainAxisAlignment.spaceBetween,
     children: <Widget>[
       Container(
-        width: 120,
-        height: 35,
+        width: 27.5.w,
+        height: 4.6.h,
         decoration: BoxDecoration(
-            color: Colors.blue, borderRadius: BorderRadius.circular(10)),
+            color: Colors.blue, borderRadius: BorderRadius.circular(2.5.w)),
         child: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: EdgeInsets.all(2.0.w),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
@@ -25,7 +26,7 @@ Row buildRow2() {
               Icon(
                 Icons.add,
                 color: Colors.white,
-                size: 20,
+                size: 14.2.sp,
               )
             ],
           ),

@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:grocery_plus/models/offer_product.dart';
 import 'package:grocery_plus/providers/product.dart';
 import 'package:provider/provider.dart';
+import 'package:sizer/sizer.dart';
 
 class HistoryScreen extends StatefulWidget {
   @override
@@ -32,6 +33,7 @@ class _HistoryScreenState extends State<HistoryScreen> {
     return ListTile(
         contentPadding: EdgeInsets.all(0),
         leading: CircleAvatar(
+          radius: 6.0.w,
           backgroundColor: Theme.of(context).primaryColor,
           child: Icon(
             Icons.shopping_cart,
@@ -41,25 +43,29 @@ class _HistoryScreenState extends State<HistoryScreen> {
         title: new Text(
           'Orders #' + productslist[index].id,
           style: GoogleFonts.lato(
-              textStyle: TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
+              textStyle:
+                  TextStyle(fontSize: 11.0.sp, fontWeight: FontWeight.bold)),
         ),
         subtitle: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             new Text("Delivered",
                 style: GoogleFonts.lato(
-                    textStyle: TextStyle(color: Colors.lightGreen))),
+                    textStyle: TextStyle(
+                        fontSize: 10.0.sp, color: Colors.lightGreen))),
             new Text("October 28,2020",
                 style: GoogleFonts.lato(
                     textStyle: TextStyle(
-                        fontWeight: FontWeight.w400, color: Colors.grey))),
+                        fontSize: 11.0.sp,
+                        fontWeight: FontWeight.w400,
+                        color: Colors.grey))),
           ],
         ),
-        trailing: Text(productslist[index].price.toString(),
+        trailing: Text('R' + productslist[index].price.toString(),
             style: GoogleFonts.lato(
                 textStyle: TextStyle(
                     color: Colors.orange,
-                    fontSize: 20,
+                    fontSize: 14.0.sp,
                     fontWeight: FontWeight.bold))),
         onTap: () {/* react to the tile being tapped */});
   }

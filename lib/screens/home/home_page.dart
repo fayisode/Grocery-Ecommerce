@@ -4,7 +4,7 @@ import 'package:grocery_plus/screens/home/components/builContainer.dart';
 import 'package:grocery_plus/screens/home/components/buildLastTile.dart';
 import 'package:grocery_plus/screens/home/components/favourites.dart';
 import 'package:grocery_plus/screens/home/todays_offer.dart';
-// import 'package:sizer/sizer.dart';
+import 'package:sizer/sizer.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -31,14 +31,14 @@ class _HomePageState extends State<HomePage> {
       children: <Widget>[
         buildPadding(context),
         SizedBox(
-          height: 5,
+          height: 0.65.h,
         ),
         Container(
-          height: 40,
+          height: 5.3.h,
           child: buildDefaultTabController(),
         ),
         SizedBox(
-          height: 5,
+          height: 0.65.h,
         ),
         Expanded(child: Container(child: _pages[_selectedPageIndex]))
       ],
@@ -53,29 +53,35 @@ class _HomePageState extends State<HomePage> {
           onTap: _selectPage,
           unselectedLabelColor: Colors.black54,
           indicator: BoxDecoration(
-              borderRadius: BorderRadius.circular(10), color: Colors.blue),
+              borderRadius: BorderRadius.circular(1.3.h), color: Colors.blue),
           tabs: [
             Tab(
               child: Container(
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
+                    borderRadius: BorderRadius.circular(1.3.h),
                     border: Border.all(color: Colors.blue, width: 1)),
                 child: Align(
                     alignment: Alignment.center,
                     child: Text(
                       "Today's Offer",
-                      style: GoogleFonts.lato(),
+                      style: GoogleFonts.lato(
+                          textStyle: TextStyle(
+                              fontSize: 11.0.sp, fontStyle: FontStyle.normal)),
                     )),
               ),
             ),
             Tab(
               child: Container(
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
+                    borderRadius: BorderRadius.circular(1.3.h),
                     border: Border.all(color: Colors.blue, width: 1)),
                 child: Align(
                     alignment: Alignment.center,
-                    child: Text("Favourites", style: GoogleFonts.lato())),
+                    child: Text("Favourites",
+                        style: GoogleFonts.lato(
+                            textStyle: TextStyle(
+                                fontSize: 11.0.sp,
+                                fontStyle: FontStyle.normal)))),
               ),
             ),
           ]),
@@ -91,16 +97,22 @@ class _HomePageState extends State<HomePage> {
             "Grocery Plus",
             style: GoogleFonts.lato(
                 textStyle:
-                    TextStyle(fontSize: 25, fontWeight: FontWeight.w500)),
+                    TextStyle(fontSize: 18.0.sp, fontWeight: FontWeight.w500)),
           ),
           new Icon(Icons.notifications_none)
         ],
       ),
+      SizedBox(
+        height: 0.85.h,
+      ),
       buildListTile(context),
+      SizedBox(
+        height: 0.85.h,
+      ),
       buildContainer(),
     ];
     return new Padding(
-      padding: const EdgeInsets.all(12.0),
+      padding: EdgeInsets.all(1.6.h),
       child: new Column(
         children: children2,
       ),

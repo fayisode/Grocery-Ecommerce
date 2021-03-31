@@ -3,6 +3,7 @@ import 'package:grocery_plus/providers/product.dart';
 import 'package:grocery_plus/screens/home/components/builContainer.dart';
 import 'package:grocery_plus/screens/product/product_listview.dart';
 import 'package:provider/provider.dart';
+import 'package:sizer/sizer.dart';
 
 class ProductScreen extends StatelessWidget {
   static const routeName = '/product-screen';
@@ -24,10 +25,10 @@ class ProductScreen extends StatelessWidget {
         body: Column(
           children: <Widget>[
             Padding(
-              padding: const EdgeInsets.only(
-                top: 20,
-                right: 14,
-                left: 14,
+              padding: EdgeInsets.only(
+                top: 2.7.h,
+                right: 3.5.w,
+                left: 3.5.w,
               ),
               child: buildContainer(),
             ),

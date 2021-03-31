@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../../product/product_screen.dart';
+import 'package:sizer/sizer.dart';
 
 class CategoryProduct extends StatelessWidget {
   //const ScreenProduct({Key key}) : super(key: key);
@@ -16,6 +17,8 @@ class CategoryProduct extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double selectedValW = 1.0.w;
+    double selectedValH = 1.0.h;
     return Container(
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20), color: Colors.white),
@@ -30,8 +33,8 @@ class CategoryProduct extends StatelessWidget {
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(20),
                 child: Image(
-                  height: 130,
-                  width: 150,
+                  height: selectedValH <= 7.6 ? 17.0.h : 16.0.h,
+                  width: selectedValW <= 4 ? 37.0.w : 25.0.w,
                   image: AssetImage(imageUrl),
                   fit: BoxFit.cover,
                 ),
@@ -43,7 +46,9 @@ class CategoryProduct extends StatelessWidget {
             Text(
               title,
               textAlign: TextAlign.center,
-              style: GoogleFonts.lato(),
+              style: GoogleFonts.lato(
+                  textStyle: TextStyle(
+                      fontSize: selectedValW <= 4 ? 10.0.sp : 9.0.sp)),
             )
           ],
         ),

@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:grocery_plus/models/offer_product.dart';
 import 'package:grocery_plus/providers/product.dart';
 import 'package:provider/provider.dart';
-
 import 'components/add_to_cart.dart';
 import 'components/cart_counter.dart';
 import 'components/color_and_sixe.dart';
-import 'components/color_dot.dart';
 import 'components/description_widget.dart';
 import 'components/favourite_container.dart';
 import 'components/padding_product_tile.dart';
+import 'package:sizer/sizer.dart';
 
 class ProductDetailScreen extends StatefulWidget {
   @override
@@ -45,10 +43,10 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                         decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.only(
-                                topLeft: Radius.circular(20),
-                                topRight: Radius.circular(20))),
+                                topLeft: Radius.circular(2.7.h),
+                                topRight: Radius.circular(2.7.h))),
                         child: Padding(
-                          padding: const EdgeInsets.only(top: 100, left: 10),
+                          padding: EdgeInsets.only(top: 14.0.h, left: 2.5.w),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
@@ -60,7 +58,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                                 children: <Widget>[
                                   CartCounter(),
                                   Padding(
-                                    padding: const EdgeInsets.only(right: 20),
+                                    padding: EdgeInsets.only(right: 5.0.w),
                                     child: buildFavouriteContainer(),
                                   )
                                 ],

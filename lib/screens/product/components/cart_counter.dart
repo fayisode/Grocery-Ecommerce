@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:sizer/sizer.dart';
 
 class CartCounter extends StatefulWidget {
   @override
@@ -25,12 +26,12 @@ class _CartCounterState extends State<CartCounter> {
               });
             }),
         Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: EdgeInsets.all(1.1.h),
           child: Text(
             numOfItems.toString().padLeft(2, "0"),
             style: GoogleFonts.lato(
                 textStyle:
-                    TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+                    TextStyle(fontSize: 12.1.sp, fontWeight: FontWeight.bold)),
           ),
         ),
         buildOutlinedButton(
@@ -46,11 +47,12 @@ class _CartCounterState extends State<CartCounter> {
 
   SizedBox buildOutlinedButton({IconData icon, Function press}) {
     return SizedBox(
-      width: 40,
-      height: 32,
+      width: 10.0.w,
+      height: 4.3.h,
       child: OutlineButton(
         padding: EdgeInsets.zero,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(13)),
+        shape:
+            RoundedRectangleBorder(borderRadius: BorderRadius.circular(2.6.h)),
         onPressed: press,
         child: Icon(icon),
       ),

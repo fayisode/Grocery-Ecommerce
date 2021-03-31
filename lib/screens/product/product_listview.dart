@@ -24,7 +24,7 @@ class ProductList extends StatelessWidget {
     // final offerproducts = productsData.items;
     return ListView.builder(
         itemCount: offerproducts.length,
-        padding: EdgeInsets.only(top: 10.0, bottom: 15.0),
+        padding: EdgeInsets.only(top: 1.3.h, bottom: 2.0.h),
         itemBuilder: (BuildContext context, int index) {
           return Stack(
             children: <Widget>[
@@ -37,17 +37,17 @@ class ProductList extends StatelessWidget {
 
   Positioned buildPositioned(BuildContext context, int index) {
     return Positioned(
-      left: 20.0,
-      top: 20.0,
-      bottom: 20.0,
+      left: 5.0.w,
+      top: 5.0.w,
+      bottom: 2.6.h,
       child: InkWell(
         onTap: () => selectCategory(context, index),
         child: Hero(
           tag: offerproducts[index].imageUrl + offerproducts[index].id,
           child: ClipRRect(
-            borderRadius: BorderRadius.circular(20.0),
+            borderRadius: BorderRadius.circular(2.6.h),
             child: Image(
-              width: 110.0,
+              width: 28.0.w,
               image: AssetImage(offerproducts[index].imageUrl),
               fit: BoxFit.cover,
             ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grocery_plus/screens/profile/prodile_screen.dart';
 import 'package:grocery_plus/screens/tab/components/ButtonNavigator.dart';
 import '../home/home_page.dart';
 import '../category/catergory_screen.dart';
@@ -15,7 +16,7 @@ class _TabBarsState extends State<TabBars> {
     CategoryScreen(),
     OrderScreen(),
     OrderScreen(),
-    OrderScreen()
+    ProfileScreen()
   ];
 
   int _selectedPageIndex = 0;

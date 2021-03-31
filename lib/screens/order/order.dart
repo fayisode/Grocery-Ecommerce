@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:grocery_plus/screens/order/components/history_screen.dart';
 import 'package:grocery_plus/screens/order/components/ongoing_screen.dart';
-
+import 'package:sizer/sizer.dart';
 import 'components/build_container.dart';
 import 'components/build_padding.dart';
 
@@ -28,7 +28,7 @@ class _OrderScreenState extends State<OrderScreen> {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.all(12.0),
+          padding: EdgeInsets.all(3.0.w),
           child: Column(
             children: <Widget>[
               buildPadding(),

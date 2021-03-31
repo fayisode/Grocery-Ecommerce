@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:md2_tab_indicator/md2_tab_indicator.dart';
+import 'package:sizer/sizer.dart';
 
 Container buildContainer(_selectPages) {
   return Container(
-    height: 40,
+    height: 5.3.h,
     child: DefaultTabController(
       length: 2,
       child: TabBar(
@@ -14,7 +15,7 @@ Container buildContainer(_selectPages) {
           unselectedLabelColor: Colors.black54,
           indicator: MD2Indicator(
               //it begins here
-              indicatorHeight: 3,
+              indicatorHeight: 0.4.h,
               indicatorColor: Color(0xff1a73e8),
               indicatorSize:
                   MD2IndicatorSize.full //3 different modes tiny-normal-full
@@ -26,7 +27,9 @@ Container buildContainer(_selectPages) {
                     alignment: Alignment.center,
                     child: Text(
                       "Ongoing",
-                      style: GoogleFonts.lato(),
+                      style: GoogleFonts.lato(
+                          textStyle: TextStyle(
+                              fontSize: 13.0.sp, fontStyle: FontStyle.normal)),
                     )),
               ),
             ),
@@ -34,7 +37,11 @@ Container buildContainer(_selectPages) {
               child: Container(
                 child: Align(
                     alignment: Alignment.center,
-                    child: Text("History", style: GoogleFonts.lato())),
+                    child: Text("History",
+                        style: GoogleFonts.lato(
+                            textStyle: TextStyle(
+                                fontSize: 13.0.sp,
+                                fontStyle: FontStyle.normal)))),
               ),
             ),
           ]),

@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:grocery_plus/models/offer_product.dart';
+import 'package:sizer/sizer.dart';
 
 Padding buildPaddingProductTile(
     BuildContext context, List<ProductOffer> listproduct, Size size) {
   return Padding(
-    padding: EdgeInsets.symmetric(horizontal: 10, vertical: 20),
+    padding: EdgeInsets.symmetric(horizontal: 1.3.h, vertical: 5.0.w),
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
@@ -25,7 +26,7 @@ Padding buildPaddingProductTile(
                   style: GoogleFonts.lato(
                       textStyle: TextStyle(
                           color: Colors.white,
-                          fontSize: 25,
+                          fontSize: 17.8.sp,
                           fontWeight: FontWeight.bold)),
                 ),
               ],
@@ -49,7 +50,7 @@ Padding buildPaddingProductTile(
                 style: GoogleFonts.lato(
                     textStyle: TextStyle(
                         color: Colors.white,
-                        fontSize: 25,
+                        fontSize: 17.8.sp,
                         fontWeight: FontWeight.bold))),
           ])),
           Container(

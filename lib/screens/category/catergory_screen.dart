@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'components/category_product.dart';
 import '../../models/category.dart';
+import 'package:sizer/sizer.dart';
 
 class CategoryScreen extends StatelessWidget {
   final List<Category> screenProduct = [
@@ -38,15 +39,15 @@ class CategoryScreen extends StatelessWidget {
         child: Column(
           children: [
             Padding(
-              padding: const EdgeInsets.only(left: 20, right: 120, top: 20),
+              padding: EdgeInsets.only(left: 5.0.w, right: 30.0.w, top: 2.6.h),
               child: Text("What would you like to buy?",
                   style: GoogleFonts.lato(
                       textStyle: TextStyle(
-                          fontSize: 27, fontWeight: FontWeight.bold))),
+                          fontSize: 21.0.sp, fontWeight: FontWeight.bold))),
             ),
             Expanded(
               child: new GridView.builder(
-                padding: const EdgeInsets.all(10),
+                padding: EdgeInsets.all(1.3.h),
                 itemCount: screenProduct.length,
                 itemBuilder: (ctx, i) => CategoryProduct(screenProduct[i].id,
                     screenProduct[i].imageUrl, screenProduct[i].title),
